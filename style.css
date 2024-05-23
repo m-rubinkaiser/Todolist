@@ -113,8 +113,9 @@ ul li{
   list-style: none;
   color: var(--primary-color);
   font-size: 17px;
-  padding: 12px 8px 12px 50px;
+  padding: 12px 30px 12px 50px;
   cursor: pointer;
+  word-wrap: break-word;
 }
 
 ul li::before{
@@ -157,4 +158,8 @@ ul div span:hover{
   background: var(--span-background);
 }
 
-
+@media only screen and (max-width: 480px) {
+  #addToDo{
+    display: none;
+  }
+}
