@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins',sans-serif;
+  box-sizing: border-box;
+}
+
+* {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+:root{
+  --secondary-color:#ffffff;
+  --primary-color: #000000;
+  --gradient1-color:#1789be;
+  --gradient2-color:#b652cf;
+  --button-color:#fc21219f;
+  --span-background:#e7e7e7;
+  --span-color:#444444;
+}
+
+.dark-theme{
+  --secondary-color:#222222;
+  --primary-color: #ffffff;
+  --gradient1-color:#153677;
+  --gradient2-color:#4e085f;
+  --button-color:#474747;
+  --span-background:#3b3b3b;
+  --span-color:#555;
+}
+
+.container{
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg,var(--gradient1-color),var(--gradient2-color));
+  padding: 10px;
+}
+
+.todo-app{
+  width: 100%;
+  max-width: 540px;
+  background: var(--secondary-color);
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+
+.todo-app h2{
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h2{
+  position: relative;
+}
+
+.todo-app h2 img{
+  width: 30px;
+}
+
+h2>.logo{
+  margin-left: 10px;
+}
+
+.icon{
+  position: absolute;
+  width: 30px;
+  cursor: pointer;
+  right: 0;
+}
+
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background:  var(--secondary-color);
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+.row input{
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 14px;
+}
+
+#input-box,#addToDo{
+  color: var(--primary-color);
+}
+
+.row button{
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: var(--button-color);
+  color: var(--secondary-color);
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+ul div{
+  position: relative;
+}
+
+ul li{
+  list-style: none;
+  color: var(--primary-color);
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  cursor: pointer;
+}
+
+ul li::before{
+  content: '';
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-image: url(images/circle.png);
+  background-size: cover;
+  background-position: center;
+  top: 10px;
+  left: 10px;
+}
+
+ul li.checked{
+  color: var(--span-color);
+  text-decoration: line-through;
+}
+
+ul li.checked::before{
+  background-image: url(images/tick.png);
+}
+
+ul div span{
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: var(--span-color);
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+ul div span:hover{
+  background: var(--span-background);
+}
+
+
